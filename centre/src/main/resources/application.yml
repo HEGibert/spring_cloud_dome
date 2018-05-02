@@ -10,6 +10,10 @@ spring:
 #         url: http://192.168.56.101/zhaozx/config-repo/eureka-server  #yml或者properties配置在git资源库中统一配置管理
 #  profiles:
 #    active: dev  #相当于引入了application-dev.yml的内容，用于多个配置文件切换，比如开发模式有一套自己的配置。
+security:
+  user:
+    name: demo
+    password: actuator
 eureka:
   client:
     registerWithEureka: false  #声明不在Eureka服务注册自己
