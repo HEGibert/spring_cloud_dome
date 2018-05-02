@@ -1,0 +1,4 @@
+include 'centre'
+findProject(':centre')?.name = 'centre '
+include 'cloud-test1'
+

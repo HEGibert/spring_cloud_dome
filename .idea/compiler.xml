@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="centre__main" target="1.8" />
+      <module name="centre__test" target="1.8" />
+      <module name="cloud-test1_main" target="1.8" />
+      <module name="cloud-test1_test" target="1.8" />
+      <module name="spring_cloud_dome_main" target="1.8" />
+      <module name="spring_cloud_dome_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

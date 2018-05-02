@@ -1,0 +1,20 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: EurekaServer
+#  cloud:
+#    config:
+#      server:
+#        git:
+#         url: http://192.168.56.101/zhaozx/config-repo/eureka-server  #yml或者properties配置在git资源库中统一配置管理
+#  profiles:
+#    active: dev  #相当于引入了application-dev.yml的内容，用于多个配置文件切换，比如开发模式有一套自己的配置。
+eureka:
+  client:
+    registerWithEureka: false  #声明不在Eureka服务注册自己
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #${}方式为引用变量，这里指代Eureka服务注册地址
+  instance:
+    hostname: 127.0.0.1

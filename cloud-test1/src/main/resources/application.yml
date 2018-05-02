@@ -1,0 +1,10 @@
+server:
+  port: 11995
+spring:
+  application:
+    name: cloud-test1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centre .iml" filepath="$PROJECT_DIR$/.idea/modules/centre .iml" group="centre " />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centre/centre__main.iml" filepath="$PROJECT_DIR$/.idea/modules/centre/centre__main.iml" group="centre " />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centre/centre__test.iml" filepath="$PROJECT_DIR$/.idea/modules/centre/centre__test.iml" group="centre " />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cloud-test1.iml" filepath="$PROJECT_DIR$/.idea/modules/cloud-test1.iml" group="cloud-test1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cloud-test1/cloud-test1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cloud-test1/cloud-test1_main.iml" group="cloud-test1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cloud-test1/cloud-test1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cloud-test1/cloud-test1_test.iml" group="cloud-test1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring_cloud_dome.iml" filepath="$PROJECT_DIR$/.idea/modules/spring_cloud_dome.iml" />
+    </modules>
+  </component>
+</project>
