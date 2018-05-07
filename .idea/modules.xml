@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/centre .iml" filepath="$PROJECT_DIR$/.idea/modules/centre .iml" group="centre " />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/centre/centre__main.iml" filepath="$PROJECT_DIR$/.idea/modules/centre/centre__main.iml" group="centre " />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/centre/centre__test.iml" filepath="$PROJECT_DIR$/.idea/modules/centre/centre__test.iml" group="centre " />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cloud-config-service.iml" filepath="$PROJECT_DIR$/.idea/modules/cloud-config-service.iml" group="cloud-config-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cloud-config-service/cloud-config-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cloud-config-service/cloud-config-service_main.iml" group="cloud-config-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cloud-config-service/cloud-config-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cloud-config-service/cloud-config-service_test.iml" group="cloud-config-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cloud-test1.iml" filepath="$PROJECT_DIR$/.idea/modules/cloud-test1.iml" group="cloud-test1" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cloud-test1/cloud-test1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cloud-test1/cloud-test1_main.iml" group="cloud-test1" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cloud-test1/cloud-test1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cloud-test1/cloud-test1_test.iml" group="cloud-test1" />

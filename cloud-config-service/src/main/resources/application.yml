@@ -1,0 +1,10 @@
+server:
+  port: 11991
+spring:
+  application:
+    name: cloud-config-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://demo:actuator@localhost:8761/eureka
