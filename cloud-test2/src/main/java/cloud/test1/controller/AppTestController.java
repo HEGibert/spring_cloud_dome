@@ -17,7 +17,7 @@ public class AppTestController {
 
     @RequestMapping(value = "hello",method = RequestMethod.GET)
     public String index(){
-        log.info("test1");
+        log.info("test2");
         return "hello world";
     }
 }
