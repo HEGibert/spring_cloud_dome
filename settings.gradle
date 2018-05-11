@@ -2,4 +2,7 @@ include 'centre'
 findProject(':centre')?.name = 'centre '
 include 'cloud-test1'
 include 'cloud-config-service'
+include 'cloud-Ribbon-service'
+include 'cloud-test2'
+include 'cloud-Feign-service'
 
