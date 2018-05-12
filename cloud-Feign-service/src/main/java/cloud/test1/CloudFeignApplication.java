@@ -15,7 +15,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 //@EnableCircuitBreaker
 public class CloudFeignApplication {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         SpringApplication.run(CloudFeignApplication.class, args);
     }
 }
