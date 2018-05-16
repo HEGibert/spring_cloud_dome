@@ -5,4 +5,5 @@ include 'cloud-config-service'
 include 'cloud-Ribbon-service'
 include 'cloud-test2'
 include 'cloud-Feign-service'
+include 'cloud-Zuul'
 

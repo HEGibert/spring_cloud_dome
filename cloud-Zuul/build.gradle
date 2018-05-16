@@ -1,0 +1,48 @@
+buildscript {
+    ext{
+        springBootVersion = '1.5.3.RELEASE'
+    }
+
+    repositories {
+        mavenLocal()
+        maven {
+            name 'ali'
+            url "http://maven.aliyun.com/nexus/content/repositories/central"
+        }
+        jcenter()
+        mavenCentral()
+        maven { url "https://repo.spring.io/snapshot" }
+        maven { url "https://repo.spring.io/milestone" }
+    }
+    dependencies {
+        //使用1.4.2.RELEASE版本的Spring框架
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+//生成的jar包包名和版本
+jar {
+    baseName = 'cloud-zuul'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+//设置jdk的版本
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+//添加编译时的依赖
+dependencies {
+    compile 'org.springframework.cloud:spring-cloud-starter-config:1.3.1.RELEASE'
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka-server:1.3.1.RELEASE'
+    compile 'org.springframework.boot:spring-boot-actuator:1.5.3.RELEASE'
+    compile 'org.springframework.cloud:spring-cloud-starter-zuul:1.3.1.RELEASE'
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
