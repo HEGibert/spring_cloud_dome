@@ -1,8 +1,8 @@
 server:
-  port: 8760
+  port: 8761
 spring:
   application:
-    name: EurekaServer
+    name: EurekaServer1
 #  cloud:
 #    config:
 #      server:
