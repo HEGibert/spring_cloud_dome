@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: cloud-test1
+  data:
+    mongodb:
+      uri: mongodb://root:123@120.76.84.42:27017/trjwowbox
+      password: 123
+      username: root
 
 eureka:
   client:
