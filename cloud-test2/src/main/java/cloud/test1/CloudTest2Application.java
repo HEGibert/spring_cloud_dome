@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-@EnableMongoRepositories("dao")
+@EnableMongoRepositories(value = "doao.custom")
 @EntityScan("domain")
 public class CloudTest2Application {
 

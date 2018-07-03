@@ -1,6 +1,6 @@
 package cloud.test1.service;
 
-import cloud.test1.dao.custom.HomeBannerRepository;
+import cloud.test1.doao.custom.HomeBannerRepository;
 import cloud.test1.domain.entity.HomeBanner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
