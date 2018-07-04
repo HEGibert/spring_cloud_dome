@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class HomeBannerService {
 
-    private final HomeBannerRepository homeBannerRepository;
+  /*  private final HomeBannerRepository homeBannerRepository;
 
     @Autowired
     HomeBannerService(HomeBannerRepository homeBannerRepository){
         this.homeBannerRepository = homeBannerRepository;
-    }
+    }*/
 
     public Object saveHomeBanner(){
 
@@ -23,14 +23,14 @@ public class HomeBannerService {
         homeBanner.setUrl("http://www.009dz.com");
         homeBanner.setDesc("这是第二个描述");
 
-        homeBannerRepository.save(homeBanner);
+//        homeBannerRepository.save(homeBanner);
 
         return null;
     }
 
     public Object findHomeBanner(String name){
 
-//        return null;
-        return homeBannerRepository.findByName(name);
+        return null;
+//        return homeBannerRepository.findByName(name);
     }
 }

@@ -9,6 +9,13 @@ spring:
       password: 123
       username: root
 
+
+mongodb:
+  uri: 120.76.84.42:27017
+  password: 123
+  usernmae: root
+  databasename: trjwowbox
+
 eureka:
   client:
     service-url:
