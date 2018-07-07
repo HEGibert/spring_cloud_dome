@@ -30,6 +30,7 @@ public class MongoDBConfig {
     @Bean
     public MongoDbFactory mongoDbFactory() throws UnknownHostException {
 
+
         String uriStr="mongodb://"+username+":"+passwrod+"@"+uri+"/"+databaseName;
         System.out.println("mongo链接"+uriStr);
         MongoClientURI mongoClientURI=new MongoClientURI(uriStr);

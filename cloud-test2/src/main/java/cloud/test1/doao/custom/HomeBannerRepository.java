@@ -7,10 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository()
+@Repository
 public interface HomeBannerRepository extends MongoRepository<HomeBanner,String> {
 
    HomeBanner findByName(String name);
-
-    List<HomeBanner> findByStatus();
 }
