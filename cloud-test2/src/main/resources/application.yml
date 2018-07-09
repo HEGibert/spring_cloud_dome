@@ -6,13 +6,13 @@ spring:
   data:
     mongodb:
 
-     # uri: mongodb://root:123@120.76.84.42:27017/trjwowbox
-      host: 120.76.84.42
-      port: 27017
+      uri: mongodb://root:123@120.76.84.42:27017/test
+     # host: 120.76.84.42
+     # port: 27017
       password: 123
       username: root
-      database: admin
-      #authentication-database: trjwowbox
+     # database: admin
+     # authentication-database: trjwowbox
 #security:
 #    authorization: enabled
 
@@ -21,7 +21,7 @@ mongodb:
   uri: 120.76.84.42:27017
   password: 123
   usernmae: root
-  databasename: trjwowbox
+  databasename: admin
 
 eureka:
   client:

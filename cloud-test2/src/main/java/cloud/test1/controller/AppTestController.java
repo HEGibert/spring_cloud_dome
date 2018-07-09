@@ -40,4 +40,10 @@ public class AppTestController {
         return homeBannerService.findHomeBanner(name);
    }
 
+    @RequestMapping(value = "find/homebanner",method = RequestMethod.GET)
+    public Object findHomeBanner(){
+
+        return homeBannerService.findHomeBanner();
+    }
+
 }

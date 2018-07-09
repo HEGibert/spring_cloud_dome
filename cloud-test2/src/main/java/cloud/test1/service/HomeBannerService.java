@@ -3,6 +3,9 @@ package cloud.test1.service;
 import cloud.test1.doao.custom.HomeBannerRepository;
 import cloud.test1.domain.entity.HomeBanner;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -10,9 +13,12 @@ public class HomeBannerService {
 
     private final HomeBannerRepository homeBannerRepository;
 
+    private final MongoOperations mongoTemplate;
+
     @Autowired
-    HomeBannerService(HomeBannerRepository homeBannerRepository){
+    HomeBannerService(HomeBannerRepository homeBannerRepository, MongoOperations mongoTemplate){
         this.homeBannerRepository = homeBannerRepository;
+        this.mongoTemplate = mongoTemplate;
     }
 
     public Object saveHomeBanner(){
@@ -32,5 +38,10 @@ public class HomeBannerService {
 
 //        return null;
         return homeBannerRepository.findByName(name);
+    }
+
+    public Object findHomeBanner(){
+
+        return mongoTemplate.findOne(new Query(Criteria.where("name").is("第二条数据")),HomeBanner.class);
     }
 }
