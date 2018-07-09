@@ -3,14 +3,14 @@ server:
 spring:
   application:
     name: cloud-test1
-  data:
-    mongodb:
+  #data:
+    #mongodb:
 
-      uri: mongodb://root:123@120.76.84.42:27017/test
+     # uri: mongodb://root:123@120.76.84.42:27017/test
      # host: 120.76.84.42
      # port: 27017
-      password: 123
-      username: root
+     # password: 123
+     # username: root
      # database: admin
      # authentication-database: trjwowbox
 #security:
