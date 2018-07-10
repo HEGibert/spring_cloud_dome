@@ -42,6 +42,8 @@ public class HomeBannerService {
 
     public Object findHomeBanner(){
 
+        HomeBanner one = mongoTemplate.findOne(new Query(Criteria.where("name").is("第二条数据")), HomeBanner.class);
+
         return mongoTemplate.find(new Query(Criteria.where("name").is("第二条数据")),HomeBanner.class);
     }
 }
