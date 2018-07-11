@@ -8,6 +8,8 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class HomeBannerService {
 
@@ -21,13 +23,7 @@ public class HomeBannerService {
         this.mongoTemplate = mongoTemplate;
     }
 
-    public Object saveHomeBanner(){
-
-        HomeBanner homeBanner = new HomeBanner();
-        homeBanner.setName("第二条数据");
-        homeBanner.setStatus(1);
-        homeBanner.setUrl("http://www.009dz.com");
-        homeBanner.setDesc("这是第二个描述");
+    public Object saveHomeBanner(HomeBanner homeBanner){
 
         homeBannerRepository.save(homeBanner);
 
@@ -38,6 +34,16 @@ public class HomeBannerService {
 
 //        return null;
         return homeBannerRepository.findByName(name);
+    }
+
+    public Object findHomeBannersByStatus(){
+
+        return homeBannerRepository.findAllByStatus(1);
+    }
+
+    public Object findHomeBanners(){
+
+        return homeBannerRepository.findAll();
     }
 
     public Object findHomeBanner(){

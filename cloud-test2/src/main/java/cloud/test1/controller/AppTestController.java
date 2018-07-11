@@ -1,5 +1,6 @@
 package cloud.test1.controller;
 
+import cloud.test1.domain.entity.HomeBanner;
 import cloud.test1.model.view.UserDTO;
 import cloud.test1.service.HomeBannerService;
 import org.slf4j.Logger;
@@ -31,8 +32,8 @@ public class AppTestController {
     }
 
    @RequestMapping(value = "save/homebanner",method = RequestMethod.POST)
-   public String saveHomeBanner(){
-        homeBannerService.saveHomeBanner();
+   public String saveHomeBanner(@RequestBody HomeBanner homeBanner){
+        homeBannerService.saveHomeBanner(homeBanner);
 
         return "seccess";
    }
@@ -43,7 +44,20 @@ public class AppTestController {
         return homeBannerService.findHomeBanner(name);
    }
 
+    @RequestMapping(value = "find/homebanner/bystatus",method = RequestMethod.GET)
+    public Object findHomeBannerListByStatus(){
+
+        return homeBannerService.findHomeBannersByStatus();
+    }
+
     @RequestMapping(value = "find/homebanner",method = RequestMethod.GET)
+    public Object findHomeBannerList(){
+
+        return homeBannerService.findHomeBannersByStatus();
+    }
+
+    //测试Query  Criteria
+    @RequestMapping(value = "find/homebanner/query",method = RequestMethod.GET)
     public Object findHomeBanner(){
 
         return homeBannerService.findHomeBanner();

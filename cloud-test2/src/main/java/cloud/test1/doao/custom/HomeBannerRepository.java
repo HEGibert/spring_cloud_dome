@@ -11,4 +11,8 @@ import java.util.List;
 public interface HomeBannerRepository extends MongoRepository<HomeBanner,String> {
 
    HomeBanner findByName(String name);
+
+   List<HomeBanner> findAllByStatus(Integer status);
+
+   List<HomeBanner> findAll();
 }
