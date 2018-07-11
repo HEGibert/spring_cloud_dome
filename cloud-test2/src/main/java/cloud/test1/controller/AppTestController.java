@@ -1,13 +1,16 @@
 package cloud.test1.controller;
 
+import cloud.test1.model.view.UserDTO;
 import cloud.test1.service.HomeBannerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
 
 /**
  * Created by hefan on 2018/5/2.
@@ -44,6 +47,17 @@ public class AppTestController {
     public Object findHomeBanner(){
 
         return homeBannerService.findHomeBanner();
+    }
+
+    @RequestMapping(value = "test/valid",method = RequestMethod.POST)
+    public Object testValid(@Valid @RequestBody UserDTO userDTO, BindingResult result){
+        if (result.hasErrors()){
+            List<ObjectError> errorList = result.getAllErrors();
+            for(ObjectError error : errorList){
+                System.out.println(error.getDefaultMessage());
+            }
+        }
+        return "seccess";
     }
 
 }
