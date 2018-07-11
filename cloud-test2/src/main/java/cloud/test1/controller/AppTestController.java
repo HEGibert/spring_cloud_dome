@@ -53,7 +53,7 @@ public class AppTestController {
     @RequestMapping(value = "find/homebanner",method = RequestMethod.GET)
     public Object findHomeBannerList(){
 
-        return homeBannerService.findHomeBannersByStatus();
+        return homeBannerService.findHomeBanners();
     }
 
     //测试Query  Criteria

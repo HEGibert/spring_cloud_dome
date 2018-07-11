@@ -19,9 +19,9 @@ spring:
 
 mongodb:
   uri: 120.76.84.42:27017
-  password: 123
-  usernmae: root
-  databasename: admin
+  password: abc123
+  usernmae: dphouse
+  databasename: mydb
 
 eureka:
   client:
