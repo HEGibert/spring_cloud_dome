@@ -18,10 +18,21 @@ buildscript {
         //使用1.4.2.RELEASE版本的Spring框架
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
+
+
+}
+
+plugins {
+    id "com.arenagod.gradle.MybatisGenerator" version "1.4"
 }
 
 apply plugin: 'java'
 apply plugin: 'spring-boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'war'
+//引入 mybatis-generator 插件mybatis-generetor
+//apply plugin: 'com.arenagod.gradle.MybatisGenerator'
+
 
 //生成的jar包包名和版本
 jar {
@@ -30,20 +41,44 @@ jar {
 }
 
 repositories {
-    mavenCentral()
+    maven {
+        name 'ali'
+        url "http://maven.aliyun.com/nexus/content/repositories/central"
+    }
 }
+
+
 
 //设置jdk的版本
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+configurations {
+    //这里需要使用 MyBatis Generator，MySQL 驱动，以及 MyBatis Mapper.
+    //由于代码生成单独运行即可,不需要参与到整个项目的编译，因此在 build.gradle 中添加配置：
+    mybatisGenerator
+}
+
 //添加编译时的依赖
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+   // compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-security')
     compile 'org.springframework.cloud:spring-cloud-starter-config:1.3.1.RELEASE'
     compile 'org.springframework.cloud:spring-cloud-starter-eureka-server:1.3.1.RELEASE'
     compile 'org.springframework.boot:spring-boot-actuator:1.5.3.RELEASE'
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2'
+    compile ('mysql:mysql-connector-java')
+    // https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core
+    compile 'org.mybatis.generator:mybatis-generator-core:1.3.2'
+
+//    compile 'com.alibaba:druid'
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
+}
+
+// mybatis-generator.xml 配置路径
+mybatisGenerator {
+    verbose = true
+    configFile = 'src/main/resources/mybatis/mybatis-generator.xml'
 }

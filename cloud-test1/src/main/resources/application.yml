@@ -3,6 +3,16 @@ server:
 spring:
   application:
     name: cloud-test1
+  datasource:
+#    url:
+#    username:
+#    password:
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  #实体类所做包
+  type-aliases-package: cloud.test1.model
+  #mapper.xml所在位置
+  mapper-locations: classpath:mappers/*.xml
 
 eureka:
   client:
